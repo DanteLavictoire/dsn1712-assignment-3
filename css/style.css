@@ -8,19 +8,23 @@
   margin: 0 auto; 
 }
 
-header{
+header div{
   background-color: #000;
   color: #fff;
   margin: 0%;
   padding: 0%;
-}
-
-.name{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-self: center;
 }
+
+/* .name{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: center;
+} */
 
 nav ul{
   display: flex;
@@ -31,23 +35,24 @@ nav ul{
   align-self: center;
 }
 
-.hero{
+#hero{
   height: 600px;
   background-image: url(../images/hands-typing.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   filter: grayscale(70%);
 
 }
 
-h1{
+#hero h1{
   max-width: 60%;
+  color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: #000;
+  text-shadow: 1px 1px 1px;
   display: flex;
-  text-align: center;
-  justify-content: center;
+  align-items: center;
+  justify-content: center;  
 }
 
 #about-me .wrapper{
@@ -55,8 +60,8 @@ h1{
   align-content: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  text-align: center;
-  margin: 5px 0px 0xp 5px;
+  text-align: left;
+  margin: 5px 0px 0px 5px;
 }
 
 #services .wrapper{
