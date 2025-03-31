@@ -4,129 +4,150 @@
 
 .wrapper{
   max-width: 940px;
-  align-items: center; 
-  margin: 0 auto; 
+  margin: auto;
+}
+
+header, footer{
+  text-align: center;
+  background-color: black;
+  color: white;
 }
 
 header div{
-  background-color: #000;
-  color: #fff;
-  margin: 0%;
-  padding: 0%;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-self: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* .name{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-self: center;
-} */
-
-nav ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  gap: 1rem;
+header ul{
   list-style: none;
-  align-self: center;
+}
+
+header ul li{
+  display: inline-block;
+}
+
+header a{
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #hero{
   height: 600px;
   background-image: url(../images/hands-typing.jpg);
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   filter: grayscale(70%);
-
 }
 
 #hero h1{
   max-width: 60%;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: 1px 1px 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;  
+  background-color: rgba(0 0, 0, 0.5);
+  text-align: center;
+  text-shadow: 2px 2px black;
+  padding: 10px;
 }
 
 #about-me .wrapper{
-  max-width: 940px;
-  align-content: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  text-align: left;
-  margin: 5px 0px 0px 5px;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
 
-#services .wrapper{
-  max-width: 940px;
-  align-content: center;
+#about-me img{
+  grid-column: 3 / 4;
+  max-width: 100%;
+}
+
+#about-me .wrapper div{
+  grid-column: 1 / 3;
+}
+
+#services{
   background-color: #fafafa;
+  padding: 5px;
+}
+
+#services h2{
+  max-width: 100%;
   text-align: center;
+}
+
+#services .wrapper div{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-evenly;
-  gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
 }
 
-
-h3{
-  max-width: 940px;
-  text-align: center;
-}
-
-article{
+#services article{
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
-.btn{
-  margin: auto;
-  padding-top: 20px;
+
+#services a:link, a:visited{
   background-color: black;
-  border: black;
   color: white;
-  text-align: center;
+  text-decoration: none;
+  padding: 15px 10px;
+  border: 3px solid black;
+  margin-top: auto;
+  display: inline-block;
 }
 
-
-a:hover{
+#services a:hover, a:focus{
   background-color: white;
   color: black;
-  border: black;
 }
 
-
-#work .wrapper{
-max-width: 940px;
-text-align: center;
-}
-
-.images{
-  max-width: 940px;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: 
- "img1 img1 img2 img2"
- "img1 img1 img2 img2"
- "img3 img4 img5 img5"
- ;
- 
-}
-
-
-
-
-
-/* footer{
-  background-color: #000;
-  color: #fff;
+#work p, #work h2 {
+  max-width: 100%;
   text-align: center;
-} */
+}
+
+#work .wrapper div{
+  display: grid;
+  grid-template-columns:repeat(6, 1fr);
+  grid-template-areas: 
+  "div1 div1 div1 div2 div2 div2"
+  "div3 div3 div4 div4 div5 div5"
+  ;
+  margin-bottom: 65px;
+}
+
+#work img:nth-child(1){
+  grid-area:div1;
+  max-width: 100%;
+}
+
+#work img:nth-child(2){
+  grid-area:div2;
+  max-width: 100%;
+}
+
+#work img:nth-child(3){
+  grid-area:div3;
+  max-width: 100%;
+}
+
+#work img:nth-child(4){
+  grid-area:div4;
+  max-width: 100%;
+}
+
+#work img:nth-child(5){
+  grid-area:div5;
+  max-width: 100%;
+}
